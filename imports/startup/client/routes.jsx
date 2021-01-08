@@ -9,6 +9,9 @@ import { FrontendLogin } from '../../ui/frontend/components/FrontendLogin';
 import AuthRoute from './authRoute';
 import { FrontendPosts } from '../../ui/frontend/components/FrontendPosts';
 import { FrontendContact } from '../../ui/frontend/components/FrontendContact';
+import { PostForm } from '../../ui/components/post/PostForm';
+import { PostList } from '../../ui/components/post/PostList';
+
 
 const Routes = () => (
     <Router>
@@ -18,6 +21,8 @@ const Routes = () => (
             <Route path="/login" name="login" component={FrontendLogin} />
             <AuthRoute exact path="/backend" name="backend" render={() => (<Backend children={<BackendHome />} />)}  />
             <AuthRoute exact path="/backend/main" name="backend.main" render={() => (<Backend children={<BackendMain />} />)}  />
+            <AuthRoute exact path="/backend/posts" name="backend.posts" render={() => (<Backend children={<PostList />} />)}  />
+            <AuthRoute exact path="/backend/posts/create" name="backend.posts.create" render={() => (<Backend children={<PostForm />} />)}  />
         </Switch>
     </Router>
 );

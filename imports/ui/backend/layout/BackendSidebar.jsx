@@ -41,7 +41,48 @@ export const BackendSidebar = () => {
     <nav className="mt-2">
       <ul className="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
        
-        <li className="nav-item menu-open">
+      <li className="nav-item">
+        <NavLink to="/backend" exact className="nav-link" activeClassName="active"> <i className="far fa-circle nav-icon"></i> <p>Главная</p></NavLink>
+      </li>
+       
+      <li className="nav-item menu">
+
+                
+<a href="#" className="nav-link">
+  <i className="nav-icon fas fa-tachometer-alt"></i>
+  <p>
+    Записи
+    <i className="right fas fa-angle-left"></i>
+  </p>
+</a>
+<ul className="nav nav-treeview">
+<li className="nav-item">
+  <NavLink to="/backend/posts/create" exact className="nav-link" activeClassName="active"> <i className="fa fa-plus nav-icon"></i> <p>Создать</p></NavLink>
+  </li>
+<li className="nav-item">
+  <NavLink to="/backend/posts" exact className="nav-link" activeClassName="active"> <i className="far fa-circle nav-icon"></i> <p>Список</p></NavLink>
+  </li>
+  <li className="nav-item">
+  <NavLink to="/backend/main" exact className="nav-link" activeClassName="active"> <i className="far fa-circle nav-icon"></i> <p>Main</p></NavLink>
+  </li>
+  <li className="nav-item">            
+  
+    <a href="#" className="nav-link">
+      <i className="far fa-circle nav-icon"></i>
+      <p>Active Page</p>
+    </a>
+  </li>
+  <li className="nav-item">
+    <a href="#" className="nav-link">
+      <i className="far fa-circle nav-icon"></i>
+      <p>Inactive Page</p>
+    </a>
+  </li>
+</ul>
+</li>
+
+
+        <li className="nav-item menu">
 
                 
           <a href="#" className="nav-link">
